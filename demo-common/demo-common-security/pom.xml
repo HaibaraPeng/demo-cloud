@@ -3,20 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>demo</artifactId>
+        <artifactId>demo-common</artifactId>
         <groupId>com.roc</groupId>
         <version>0.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>demo-common-security</artifactId>
+    <packaging>jar</packaging>
 
-    <description>demo 公共聚合模块</description>
+    <description>demo 安全工具类</description>
 
-    <modules>
-        <module>demo-common-bom</module>
-        <module>demo-common-security</module>
-    </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+    </dependencies>
 </project>
