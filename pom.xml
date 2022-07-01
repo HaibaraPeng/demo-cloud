@@ -9,6 +9,7 @@
     <modules>
         <module>demo-common</module>
         <module>demo-nacos</module>
+        <module>demo-gateway</module>
     </modules>
     <name>demo-cloud</name>
     <description>Demo project for Spring Cloud</description>

@@ -36,6 +36,12 @@
         <sentinel.version>1.8.4</sentinel.version>
     </properties>
 
+    <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <plugins>
             <!--打包jar 与git commit 关联插件-->
