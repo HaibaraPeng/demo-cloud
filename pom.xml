@@ -46,13 +46,13 @@
     <dependencyManagement>
         <dependencies>
             <!--demo 公共版本定义-->
-<!--            <dependency>-->
-<!--                <groupId>com.roc</groupId>-->
-<!--                <artifactId>pig-common-bom</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-common-bom</artifactId>
+                <version>0.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- spring boot 依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
