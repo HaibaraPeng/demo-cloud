@@ -8,6 +8,7 @@
     <version>0.0.1</version>
     <modules>
         <module>demo-common</module>
+        <module>demo-nacos</module>
     </modules>
     <name>demo-cloud</name>
     <description>Demo project for Spring Cloud</description>
