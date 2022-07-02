@@ -15,6 +15,11 @@
     <description>demo 服务网关，基于 spring cloud gateway</description>
 
     <dependencies>
+        <!-- 工具包依赖 -->
+        <dependency>
+            <groupId>com.roc</groupId>
+            <artifactId>demo-common-core</artifactId>
+        </dependency>
         <!--gateway 网关依赖,内置webflux 依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -41,6 +41,11 @@
         <dependencies>
             <dependency>
                 <groupId>com.roc</groupId>
+                <artifactId>demo-common-core</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
                 <artifactId>demo-common-security</artifactId>
                 <version>${demo.common.version}</version>
             </dependency>
