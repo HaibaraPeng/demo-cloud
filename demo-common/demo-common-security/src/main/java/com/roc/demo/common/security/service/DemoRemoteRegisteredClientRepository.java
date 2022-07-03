@@ -40,6 +40,7 @@ public class DemoRemoteRegisteredClientRepository implements RegisteredClientRep
     @Override
     @Cacheable(value = CacheConstants.CLIENT_DETAILS_KEY, key = "#clientId", unless = "#result == null")
     public RegisteredClient findByClientId(String clientId) {
+        System.out.println("1");
         SysOauthClientDetails clientDetails = ResultUtils
                 .of(clientDetailsService.getClientDetailsById(clientId, SecurityConstants.FROM_IN))
                 .assertDataNotNull(result -> new OAuthClientException("clientId 不合法"))

@@ -30,3 +30,5 @@ demo-gateway/target
 demo-auth/target
 demo-common/*/target
 demo-upms/*/target
+
+logs

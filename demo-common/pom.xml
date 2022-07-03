@@ -19,6 +19,7 @@
         <module>demo-common-security</module>
         <module>demo-common-core</module>
         <module>demo-common-mybatis</module>
+        <module>demo-common-feign</module>
     </modules>
 
 </project>
