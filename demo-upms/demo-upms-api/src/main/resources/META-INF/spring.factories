@@ -1,0 +1,2 @@
+#org.springframework.cloud.openfeign.FeignClient.imports = \
+#  com.roc.demo.upms.api.feign.RemoteClientDetailsService

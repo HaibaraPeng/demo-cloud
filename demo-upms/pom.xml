@@ -9,16 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-common</artifactId>
+    <artifactId>demo-upms</artifactId>
+
+    <description>demo 通用用户权限管理聚合模块</description>
     <packaging>pom</packaging>
 
-    <description>demo 公共聚合模块</description>
-
     <modules>
-        <module>demo-common-bom</module>
-        <module>demo-common-security</module>
-        <module>demo-common-core</module>
-        <module>demo-common-mybatis</module>
+
+        <module>demo-upms-api</module>
+        <module>demo-upms-biz</module>
     </modules>
 
 </project>

@@ -3,22 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>demo</artifactId>
+        <artifactId>demo-common</artifactId>
         <groupId>com.roc</groupId>
         <version>0.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>demo-common-mybatis</artifactId>
 
-    <description>demo 公共聚合模块</description>
+    <packaging>jar</packaging>
 
-    <modules>
-        <module>demo-common-bom</module>
-        <module>demo-common-security</module>
-        <module>demo-common-core</module>
-        <module>demo-common-mybatis</module>
-    </modules>
+    <description>demo mybatis 封装</description>
+
+    <dependencies>
+
+    </dependencies>
 
 </project>

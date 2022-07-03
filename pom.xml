@@ -11,6 +11,7 @@
         <module>demo-nacos</module>
         <module>demo-gateway</module>
         <module>demo-auth</module>
+        <module>demo-upms</module>
     </modules>
     <name>demo-cloud</name>
     <description>Demo project for Spring Cloud</description>

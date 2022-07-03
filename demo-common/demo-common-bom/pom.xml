@@ -49,6 +49,17 @@
                 <artifactId>demo-common-security</artifactId>
                 <version>${demo.common.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.roc</groupId>
+                <artifactId>demo-upms-api</artifactId>
+                <version>${demo.common.version}</version>
+            </dependency>
+            <!--mybatis -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             <!--springdoc -->
             <dependency>
                 <groupId>org.springdoc</groupId>

@@ -5,7 +5,7 @@ package com.roc.demo.common.core.constant;
  * @Author penn
  * @Date 2022/7/2 10:10
  */
-public interface SecurityConstants {
+public interface    SecurityConstants {
 
     /**
      * 默认登录URL
@@ -21,4 +21,14 @@ public interface SecurityConstants {
      * BASIC_
      */
     String BASIC = "Basic ";
+
+    /**
+     * 标志
+     */
+    String FROM = "from";
+
+    /**
+     * 内部
+     */
+    String FROM_IN = "Y";
 }

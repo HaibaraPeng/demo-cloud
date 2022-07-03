@@ -28,3 +28,5 @@ hs_err_pid*
 demo-nacos/target
 demo-gateway/target
 demo-auth/target
+demo-common/*/target
+demo-upms/*/target
