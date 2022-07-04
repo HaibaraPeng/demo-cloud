@@ -10,8 +10,13 @@ import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 
 /**
  * @Description WebUtils
@@ -52,5 +57,23 @@ public class WebUtils extends org.springframework.web.util.WebUtils {
             throw new CheckedException("Invalid basic authentication token");
         }
         return new String[]{token.substring(0, delimiter), token.substring(delimiter + 1)};
+    }
+
+    /**
+     * 获取 HttpServletRequest
+     *
+     * @return {HttpServletRequest}
+     */
+    public Optional<HttpServletRequest> getRequest() {
+        return Optional.ofNullable(((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest());
+    }
+
+    /**
+     * 获取 HttpServletResponse
+     *
+     * @return {HttpServletResponse}
+     */
+    public HttpServletResponse getResponse() {
+        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
     }
 }
