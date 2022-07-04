@@ -46,4 +46,19 @@ public interface SecurityConstants {
      * REDIRECT_URL
      */
     String REDIRECT_URL = "redirect_url";
+
+    /**
+     * 手机号登录
+     */
+    String APP = "app";
+
+    /**
+     * 角色前缀
+     */
+    String ROLE = "ROLE_";
+
+    /**
+     * {bcrypt} 加密的特征码
+     */
+    String BCRYPT = "{bcrypt}";
 }

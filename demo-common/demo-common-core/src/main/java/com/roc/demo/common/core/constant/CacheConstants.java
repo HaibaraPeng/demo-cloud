@@ -16,4 +16,9 @@ public interface CacheConstants {
      * oauth 客户端信息
      */
     String CLIENT_DETAILS_KEY = "client:details";
+
+    /**
+     * 用户信息缓存
+     */
+    String USER_DETAILS = "user_details";
 }

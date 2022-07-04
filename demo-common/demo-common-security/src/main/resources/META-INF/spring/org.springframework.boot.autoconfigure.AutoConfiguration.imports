@@ -1,2 +1,4 @@
+com.roc.demo.common.security.service.DemoUserDetailsServiceImpl
 com.roc.demo.common.security.service.DemoRedisOAuth2AuthorizationService
+com.roc.demo.common.security.component.DemoSecurityMessageSourceConfiguration
 com.roc.demo.common.security.service.DemoRemoteRegisteredClientRepository

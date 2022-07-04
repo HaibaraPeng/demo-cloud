@@ -1,1 +1,2 @@
 com.roc.demo.upms.api.feign.RemoteClientDetailsService
+com.roc.demo.upms.api.feign.RemoteUserService

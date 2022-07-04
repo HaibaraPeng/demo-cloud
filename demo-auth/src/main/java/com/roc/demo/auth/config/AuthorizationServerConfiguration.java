@@ -1,5 +1,6 @@
 package com.roc.demo.auth.config;
 
+import com.roc.demo.auth.support.core.DemoDaoAuthenticationProvider;
 import com.roc.demo.auth.support.core.FormIdentityLoginConfigurer;
 import com.roc.demo.auth.support.handler.DemoAuthenticationFailureEventHandler;
 import com.roc.demo.common.core.constant.SecurityConstants;
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.OAuth2AuthorizationService;
@@ -61,8 +63,8 @@ public class AuthorizationServerConfiguration {
                 // 授权码登录的登录页个性化
                 .and().apply(new FormIdentityLoginConfigurer()).and().build();
 
-        // TODO 注入自定义授权模式实现
-//        addCustomOAuth2GrantAuthenticationProvider(http);
+        // 注入自定义授权模式实现
+        addCustomOAuth2GrantAuthenticationProvider(http);
         return securityFilterChain;
     }
 
@@ -79,5 +81,31 @@ public class AuthorizationServerConfiguration {
                 new OAuth2ClientCredentialsAuthenticationConverter(),
                 new OAuth2AuthorizationCodeAuthenticationConverter(),
                 new OAuth2AuthorizationCodeRequestAuthenticationConverter()));
+    }
+
+    /**
+     * 注入授权模式实现提供方
+     * <p>
+     * 1. 密码模式 </br>
+     * 2. 短信登录 </br>
+     */
+    @SuppressWarnings("unchecked")
+    private void addCustomOAuth2GrantAuthenticationProvider(HttpSecurity http) {
+//        AuthenticationManager authenticationManager = http.getSharedObject(AuthenticationManager.class);
+//        OAuth2AuthorizationService authorizationService = http.getSharedObject(OAuth2AuthorizationService.class);
+//
+//        OAuth2ResourceOwnerPasswordAuthenticationProvider resourceOwnerPasswordAuthenticationProvider =
+//                new OAuth2ResourceOwnerPasswordAuthenticationProvider(authenticationManager, authorizationService,
+//                        oAuth2TokenGenerator());
+
+//        OAuth2ResourceOwnerSmsAuthenticationProvider resourceOwnerSmsAuthenticationProvider = new OAuth2ResourceOwnerSmsAuthenticationProvider(
+//                authenticationManager, authorizationService, oAuth2TokenGenerator());
+
+        // 处理 UsernamePasswordAuthenticationToken
+        http.authenticationProvider(new DemoDaoAuthenticationProvider());
+//		// 处理 OAuth2ResourceOwnerPasswordAuthenticationToken
+//		http.authenticationProvider(resourceOwnerPasswordAuthenticationProvider);
+//		// 处理 OAuth2ResourceOwnerSmsAuthenticationToken
+//		http.authenticationProvider(resourceOwnerSmsAuthenticationProvider);
     }
 }
