@@ -1,1 +1,2 @@
+com.roc.demo.common.security.service.DemoRedisOAuth2AuthorizationService
 com.roc.demo.common.security.service.DemoRemoteRegisteredClientRepository
